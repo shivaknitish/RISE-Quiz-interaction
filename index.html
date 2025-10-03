@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Block Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <!-- Quiz Content -->
+                <div id="quiz-content" class="question-card">
+                    <p class="question-number" id="question-number"></p>
+                    <h2 class="question-title" id="question-title"></h2>
+                    <div class="answer-options" id="answer-options">
+                        <!-- Answer buttons will be inserted here -->
+                    </div>
+                    <!-- Review Navigation -->
+                    <div id="review-nav" class="review-nav" style="display: none;">
+                        <button id="prev-question-btn" class="review-nav-button">Previous</button>
+                        <button id="next-question-btn" class="review-nav-button">Next</button>
+                    </div>
+                </div>
+
+                <!-- Result Screen -->
+                <div id="result-screen" class="result-content" style="display: none;">
+                    <h2 class="result-title">Quiz Complete!</h2>
+                    <div class="score-display">
+                        <p class="score-text">Your Score</p>
+                        <p class="score-number" id="score-number"></p>
+                        <p class="percentage" id="percentage"></p>
+                    </div>
+                    <div class="result-buttons">
+                        <button class="restart-button">Restart Quiz</button>
+                        <button id="review-quiz-btn" class="review-button">Review Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="modal-overlay" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h3 class="modal-title" id="modal-title"></h3>
+            <p class="modal-text" id="modal-text"></p>
+            <button class="continue-button">Continue</button>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="clapping-sound" src="clapping new.m4a" preload="auto"></audio>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script src="animation.js"></script>
+</body>
+</html>
